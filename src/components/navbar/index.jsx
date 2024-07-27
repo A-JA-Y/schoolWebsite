@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { NavLink } from 'react-router-dom'
+import { FaHome } from "react-icons/fa";
 import logo from "../images/Designer.png";
-import { FaTwitter, FaLinkedin, FaGithub, FaYoutube, FaHome } from "react-icons/fa";
 
-export default function Navbar() {
+
+export default function Navbar({ scrollToSection, refs }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,65 +16,72 @@ export default function Navbar() {
         <div className="flex justify-between ">
           <div className="flex space-x-7">
             <div>
-              <NavLink to={'/'} className="flex items-center py-4 px-2">
+              <div to={'/'} className="flex items-center py-4 px-2">
                 <img src={logo} alt="Logo" className="h-8 w-8 mr-2 hover:scale-110 rounded-full drop-shadow-md " />
                 <span className="font-semibold text-gray-500 text-lg hover:text-green-600 transition delay-300 ">
                 Springdale Public School
                 </span>
-              </NavLink>
+              </div>
             </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
-            <NavLink
-              to={'/'}
+            <div
+              
               className="py-4 px-2  text-gray-500 border-green-500 font-semibold "
             >
               <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1 "/>Home</div>
               
-            </NavLink>
-            <NavLink
-              to="/products"
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 "
+            </div>
+            <div
+             
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 " onClick={() => scrollToSection(refs.aboutRef)}
             >
               About us
-            </NavLink>
-            <NavLink
-              to={'/about'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+              
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.academicsRef)}
             >
               Academics
-            </NavLink>
-            <NavLink
-              to={'/contact-us'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+              
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.admissionsRef)}
             >
               Admissions
-            </NavLink>
-            <NavLink
-              to={'/contact-us'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+             
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.facultyRef)}
             >
               Faculty
-            </NavLink>
-            <NavLink
-              to={'/contact-us'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+              
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.studentRef)}
             >
               Students
-            </NavLink>
-            <NavLink
-              to={'/contact-us'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+             
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.galleryRef)}
             >
               Gallery
-            </NavLink>
-            <NavLink
-              to={'/contact-us'}
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              
+            </div>
+            <div
+              
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"onClick={() => scrollToSection(refs.contactRef)}
             >
               Contact us
-            </NavLink>
+              
+            </div>
           </div>
           
           {/* Mobile menu button */}
@@ -101,30 +108,38 @@ export default function Navbar() {
       </div>
       {/* Mobile Menu */}
       <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
-        <NavLink to={'/'} className="block py-2 px-4 text-sm hover:bg-green-100">
+        <div to={'/'} className="block py-2 px-4 text-sm hover:bg-green-100">
         Home
-        </NavLink>
-        <NavLink to={'/products'} className="block py-2 px-4 text-sm hover:bg-green-100">
+        </div>
+        <div to={'/products'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.aboutRef)}>
           About us
-        </NavLink>
-        <NavLink to={'/about'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+        </div>
+        <div to={'/about'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.academicsRef)}>
           Academics
-        </NavLink>
-        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+        </div>
+        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.admissionsRef)} >
           Admissions
-        </NavLink>
-        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+          
+        </div>
+        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.facultyRef)}>
           Faculty
-        </NavLink>
-        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+        </div>
+        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.studentRef)}>
           Students
-        </NavLink>
-        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+        </div>
+        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100"onClick={() => scrollToSection(refs.galleryRef)}>
           Gallery
-        </NavLink>
-        <NavLink to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100">
+          
+        </div>
+        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.contactRef)}>
           Contact us
-        </NavLink>
+          
+        </div>
         
       </div>
     </nav>
