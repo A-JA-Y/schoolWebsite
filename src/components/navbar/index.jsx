@@ -30,54 +30,54 @@ export default function Navbar({ scrollToSection, refs }) {
               
               className="py-4 px-2  text-gray-500 border-green-500 font-semibold "
             >
-              <div className="home flex text-center items-center content-evenly"><FaHome className="mx-1 "/>Home</div>
+              <div className="home flex text-center items-center content-evenly hover:cursor-pointer"><FaHome className="mx-1 "/>Home</div>
               
             </div>
             <div
              
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 " onClick={() => scrollToSection(refs.aboutRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300  hover:cursor-pointer" onClick={() => scrollToSection(refs.aboutRef)}
             >
               About us
               
             </div>
             <div
               
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.academicsRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer" onClick={() => scrollToSection(refs.academicsRef)}
             >
               Academics
               
             </div>
             <div
               
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.admissionsRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer" onClick={() => scrollToSection(refs.admissionsRef)}
             >
               Admissions
               
             </div>
             <div
              
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.facultyRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer" onClick={() => scrollToSection(refs.facultyRef)}
             >
               Faculty
               
             </div>
             <div
               
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.studentRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer" onClick={() => scrollToSection(refs.studentRef)}
             >
               Students
               
             </div>
             <div
              
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300" onClick={() => scrollToSection(refs.galleryRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer" onClick={() => scrollToSection(refs.galleryRef)}
             >
               Gallery
               
             </div>
             <div
               
-              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"onClick={() => scrollToSection(refs.contactRef)}
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300 hover:cursor-pointer"onClick={() => scrollToSection(refs.contactRef)}
             >
               Contact us
               
@@ -108,35 +108,35 @@ export default function Navbar({ scrollToSection, refs }) {
       </div>
       {/* Mobile Menu */}
       <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
-        <div to={'/'} className="block py-2 px-4 text-sm hover:bg-green-100">
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer">
         Home
         </div>
-        <div to={'/products'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.aboutRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.aboutRef)}>
           About us
           
         </div>
-        <div to={'/about'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.academicsRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.academicsRef)}>
           Academics
           
         </div>
-        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.admissionsRef)} >
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.admissionsRef)} >
           Admissions
           
           
         </div>
-        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.facultyRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.facultyRef)}>
           Faculty
           
         </div>
-        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.studentRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.studentRef)}>
           Students
           
         </div>
-        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100"onClick={() => scrollToSection(refs.galleryRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer"onClick={() => scrollToSection(refs.galleryRef)}>
           Gallery
           
         </div>
-        <div to={'/contact-us'} className="block py-2 px-4 text-sm hover:bg-green-100" onClick={() => scrollToSection(refs.contactRef)}>
+        <div  className="block py-2 px-4 text-sm hover:bg-green-100 hover:cursor-pointer" onClick={() => scrollToSection(refs.contactRef)}>
           Contact us
           
         </div>
